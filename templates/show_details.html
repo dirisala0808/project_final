@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Report</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #2E4053;
+        }
+    </style>
+    <a href="/get_details">
+    <i class="fa fa-arrow-circle-left" style="font-size:48px;color: cornflowerblue;margin-left: 20px;margin-top: 15px;"></i></a>
+    <center><h1 style="margin-top: -50px;">Patient Report</h1></center>
+        <div class="enter">
+            {% for mesg in get_flashed_messages() %}
+            <h1>{{ mesg }}</h1>
+            {% endfor %}
+        <p style="font-weight:bold">Patient Details</p>
+        <p>First Name : {{ results.first_name }}<span id="first-name"></span></p>
+        <p>Last Name : {{ results.last_name}}<span id="last-name"></span></p>
+        <p>Age : {{ results.age }}<span id="age"></span></p>
+        <p>Sex : {{ results.gender }}<span id="gender"></span></p>
+        <p>Symptoms : {{ results.symptoms}}<span id="symptoms"></span></p>
+        <p>Normal Percentage : {{ results.normal_percentage }}<span id="normal-prediction"></span></p>
+        <p>Pneumonia Percentage: {{ results.pneumonia_percentage }}<span id="pneumonia-prediction"></span></p>
+        <a href="/homepage"><input type="submit" value="Print"></a>
+        </div>
+
+    <style>
+        .enter{
+            background-color: darkgrey;
+            padding: 60px;
+            border-radius: 5px;
+        }
+        input[type=text]{
+        width: 90%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        }
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+            }
+
+        input[type=submit] {
+        background-color: teal;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        margin-top: 15px;
+        cursor: pointer;
+        float: right;
+        }
+
+        input[type=submit]:hover {
+        background-color: rgb(4, 75, 75);
+        }
+
+    </style>
+</body>
+</html>

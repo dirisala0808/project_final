@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Opening</title>
+    <style>
+		body
+		{
+			background-image: url({{ url_for ('static', filename='opening-1.jpeg') }});
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+			background-size: 100%;
+      padding:0px;
+      margin:0px;
+		}
+    .text {
+          background-color: white;
+          color: black;
+          font-size: 10vw; 
+          font-weight: bold;
+          margin: 0 auto;
+          padding: 10px;
+          width: 50%;
+          text-align: center;
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          mix-blend-mode: screen;
+        }
+    </style>
+
+
+
+<body>	
+
+    <div class="image-container">
+        <div class="text" style="font-size: 85px">PNEUMONIA DETECTION</div>
+      </div>
+  
+    <p id="clk"></p>
+    <style>
+        p
+        {
+          position: fixed;
+          color: lavender;
+          margin: 5px 100px 0px 0px;
+          font-family:cursive;
+        }
+    </style>
+    <script>
+        setInterval(getdateandtime,1000);
+        function getdateandtime()
+        {
+          var date=new Date()
+          document.getElementById("clk").innerHTML=date
+        }
+    </script>
+
+
+<ul>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <li><a href="/register" class="round red">Register<span class="round">If you want to create an account </span></a></li>
+    &emsp;&emsp;&emsp;
+    <li><a href="/login" class="round green">Login<span class="round">If you already have an account.</span></a></li>
+  </ul>
+
+
+
+
+  <style>
+    * {
+        margin: 0;
+          -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        ul {
+            margin: 30px auto;
+            text-align: center;
+        }
+        li {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+        .round {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding-top: 30px;		
+            text-decoration: none;		
+            text-align: center;
+            font-size: 25px;		
+            text-shadow: 0 1px 0 rgba(255,255,255,.7);	
+            -webkit-transition: all .25s ease-in-out;
+            -o-transition: all .25s ease-in-out;
+            -moz-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
+            box-shadow: 2px 2px 7px rgba(0,0,0,.2);
+            border-radius: 300px;
+            border-width: 5px;
+            border-style: solid;
+        }
+    
+        .round:hover {
+            width: 130%;
+            height: 130%;
+            left: -15%;
+            top: -15%;
+            font-size: 33px;
+            padding-top: 38px;
+            -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+            -o-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+            -moz-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+            box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+            -webkit-transform: rotate(-360deg);
+            -moz-transform: rotate(-360deg);
+            -o-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+        }
+    
+        a.red {
+            background-color: rgba(239,57,50,1);
+            color: rgba(133,32,28,1);
+            border-color: rgba(133,32,28,.2);
+        }
+    
+        a.red:hover {
+            color: rgba(239,57,50,1);
+        }
+    
+        a.green {
+            background-color: rgba(1,151,171,1);
+            color: rgba(0,63,71,1);
+            border-color: rgba(0,63,71,.2);
+        }
+        a.green:hover {
+            color: rgba(1,151,171,1);
+        }
+        .round span.round {
+            display: block;
+            opacity: 0;
+            -webkit-transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+            -o-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+            font-size: 1px;
+            border: none;
+            padding: 40% 20% 0 20%;
+            color: #fff;
+        }
+        .round span:hover {
+            opacity: .85;
+            font-size: 16px;
+            -webkit-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+            -moz-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+            -o-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+            text-shadow: 0 1px 1px rgba(0,0,0,.5);	
+        }
+        .green span {
+            background: rgba(0,63,71,.7);		
+        }
+    
+        .red span {
+            background: rgba(133,32,28,.7);		
+        }
+    
+        </style>
+
+
+
+
+
+
+</html>

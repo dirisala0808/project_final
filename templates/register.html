@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Register</title>
+</head>
+<body>
+
+    <a href="/opening">
+    <i class="fa fa-arrow-circle-left" style="font-size:48px;color: cornflowerblue;margin-left: 30px;margin-top: 30px;"></i></a>
+
+    <style>
+		body
+		{
+			background-image: url({{ url_for ('static', filename='opening-1.jpeg')}});
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+			background-size: 100%;
+            padding:0px;
+            margin:0px;
+		}
+        </style>
+        <div class="lform">
+         <center><h2>Register Form</h2></center>
+        {% for mesg in get_flashed_messages() %}
+        <h1>{{ mesg }}</h1>
+        {% endfor %}
+        <form action="#" method="POST">
+            <div class="imgcontainer">
+            <img src="{{ url_for ('static', filename='avtar1.jpg')}}" alt="Avatar" class="avatar">
+            </div>
+            <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input class="input-field" type="text" id="uname" placeholder="Username" name="usrnm" required>
+              </div>
+            
+              <div class="input-container">
+                <i class="fa fa-envelope icon"></i>
+                <input class="input-field" type="text" id="email" placeholder="Email" name="email">
+              </div>
+              
+              <div class="input-container">
+                <i class="fa fa-key icon"></i>
+                <input class="input-field" type="password" id="pass" placeholder="Password" name="psw">
+              </div>
+              <div class="input-container">
+                <i class="fa fa-key icon"></i>
+                <input class="input-field" type="password" id="cpass" placeholder="Confirm Password" name="psw" required>
+              </div>
+              <br><button onclick="return fun()" class="btn"
+               style="text-decoration: none;color: white;margin-left: 300px;" >Register</button><br><br>
+               <p style="font-size: 20px;"><b>Have an account already..? <a href="/login" style="color: wheat;">Login Now</a></b></p> 
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function fun()
+        {
+        var a=document.getElementById("uname").value;
+        var x =document.getElementById("email").value;
+        var c =document.getElementById("pass").value;
+        var cp=document.getElementById("cpass").value;
+         var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            if(a==0)
+                {
+                alert("Please enter username");
+                return false;
+                }
+        if(x==0)
+        {
+        alert("Please enter your email id");
+        return false;
+        }
+         if (atpos<1 || dotpos<atpos+6 || dotpos+2>=x.length)
+         {
+                alert("Not a valid e-mail address");
+                return false;
+        }
+        }
+        if(c==0)
+        {
+          alert("Please enter your password");
+          return false;
+        }
+        if(cp==0)
+        {
+          alert("Please confirm your password");
+          return false;
+        }
+        if(c!==cp)
+        {
+          alert("Passwodrs didn't match");
+          return false;
+        }
+        
+        }
+        </script>
+    
+
+        <style>
+            .lform{
+                background-color: #174e5f;
+                opacity: 0.9;
+                width: 50%;
+                padding: 40px;
+                border-radius: 40px;
+                margin-left: 320px;
+            }
+
+            .input-container {
+                display: -ms-flexbox; /* IE10 */
+                display: flex;
+                width: 100%;
+                margin-bottom: 15px;
+                }
+
+                .icon {
+                padding: 10px;
+                background: dodgerblue;
+                border-radius: 20px;
+                color: white;
+                min-width: 50px;
+                text-align: center;
+                }
+
+                .input-field {
+                width: 100%;
+                border-radius: 20px;
+                padding: 10px;
+                outline: none;
+                }
+
+                .input-field:focus {
+                border: 2px solid dodgerblue;
+                }
+
+                /* Set a style for the submit button */
+                .btn {
+                background-color: dodgerblue;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 20px;
+                cursor: pointer;
+                width: 250px;
+                opacity: 0.9;
+                }
+
+                .btn:hover {
+                opacity: 1;
+                }
+
+                .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+                }
+
+                img.avatar {
+                width: 20%;
+                border-radius: 50%;
+                }
+
+                .container {
+                padding: 16px;
+                }
+
+                span.psw {
+                float: right;
+                padding-top: 16px;
+                }
+
+                /* Change styles for span and cancel button on extra small screens */
+                @media screen and (max-width: 300px) {
+                span.psw {
+                    display: block;
+                    float: none;
+                }
+                }
+
+        </style>
+    
+</body>
+</html>

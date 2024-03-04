@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Report</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #2E4053;
+        }
+    </style>
+     <a href="/homepage">
+    <i class="fa fa-arrow-circle-left" style="font-size:48px;color: cornflowerblue;margin-left: 20px;margin-top: 15px;"></i></a>
+    <center><h1 style="margin-top: -50px;">Search Patient Details</h1></center>
+    <div class="enter">
+        <form method="POST">
+        <h2>Enter Patient Id</h2>
+        <input type="text" name="search" placeholder="Search.." required>
+        <a herf="/get_details"><button type="submit" class="button"><i class="fa fa-search"></i></button>
+    </form>
+    </div>
+
+    <style>
+        .enter{
+            background-color: darkgrey;
+            padding: 50px;
+            border-radius: 5px;
+        }
+        input[type=text] {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            transition: width 0.4s ease-in-out;
+        }
+
+        input[type=text]:focus {
+             width: 75%;
+        }
+        button {
+            width: 10%;
+            padding: 12px;
+            background: teal;
+            color: white;
+            font-size: 17px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: rgb(1, 63, 63);
+        }
+    </style>
+</body>
+</html>

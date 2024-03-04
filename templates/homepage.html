@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Home_page</title>
+</head>
+
+<body>
+    <div class="icon-bar">
+      <a href="https://www.facebook.com/PfizerKnowpneumoniaSG/" class="facebook"><i class="fa fa-facebook"></i></a> 
+      <a href="https://twitter.com/PneumoniaDay" class="twitter"><i class="fa fa-twitter"></i></a> 
+      <a href="https://ginasthma.org/world-pneumonia-day/" class="google"><i class="fa fa-google"></i></a> 
+      <a href="https://www.linkedin.com/company/global-pneumonia-prevention-coalition/about/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    </div>
+
+
+    <style>
+        body {margin:0;}
+        .icon-bar 
+        {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .icon-bar a 
+        {
+            display: block;
+            padding: 14px;
+            transition: all 0.5s ease;
+            font-size: 20px;
+        }
+        .icon-bar a:hover 
+        {
+            background-color: #000;
+        }
+        .facebook 
+        {
+            background: #3B5998;
+            color: white;
+        }
+        .twitter 
+        {
+            background: #55ACEE;
+            color: white;
+        }
+        .google 
+        {
+            background: #dd4b39;
+            color: white;
+        }
+        .linkedin 
+        {
+            background: #007bb5;
+            color: white;
+        }
+    
+        .content 
+        {
+            margin-left: 75px;
+            font-size: 30px;
+        }
+    </style>
+
+
+    <style>
+        .grid-container {display: grid;
+        grid-template-areas:
+        'h1  h1  h1  h1  h1  h1'
+        'h2  h2  h2  h2  h2  h2'
+        'h3  h3  h4  h4  h5  h5'
+        'h6  h6  h6  h6  h6  h6'
+        'h7  h7  h7  h7  h7  h7'
+        'h8  h8  h8  h9  h9  h9'
+        'h14  h14  h14  h14  h14  h14';}
+        .grid-container>div
+        { 
+        padding:20px;
+        font-size:20px;
+        margin: 0%;
+        margin-top: 0%;}
+        .item1{grid-area:h1;background-color: black;text-align: right}
+        .item2{grid-area:h2;}
+        .item3{grid-area:h3;background-color:white;text-align:center;}
+        .item4{grid-area:h4;background-color:white;text-align:center;}
+        .item5{grid-area:h5;background-color:white;text-align:center;}
+        .item6{grid-area:h6;background-color:white;text-align:center;}
+        .item7{grid-area:h7;background-color:teal;text-align:center;}
+        .item8{grid-area:h8;background-color:teal;text-align:center;}
+        .item9{grid-area:h9;background-color:teal;text-align:center;}
+        .item14{grid-area:h14;background-color:#222222;text-align:center;}
+    </style>
+
+<body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="grid-container">
+    <div class="item1" style="padding: inherit;margin-top: -50px;margin-bottom: -30px;">
+      <div class="middle">
+        <ul>
+            <li style="float: left;"><img src="{{ url_for('static', filename='logo.png') }}" style="height: 50px;margin-top: 30px;"></li>
+            <li class="active"><a href="/logout" class="btn btn4" >Logout</a></li>
+            <li class="active"><a href="/contact" class="btn btn4">Contact Us</a></li>
+            <li class="active"><a href="/aboutus" class="btn btn4">About Us</a></li>
+            <li class="active"><a href="/feedback" class="btn btn4">Feedback</a></li>
+            <li><a href="#" class="btn btn4">Home</a></li> 
+          </ul>
+        </div>
+    
+          <style>
+       ul {
+      list-style-type: none;
+      padding: 0;
+      overflow:inherit;
+    }
+    
+    li {
+      float: right;
+    }
+    
+    li:last-child {
+      border-right: none;
+    }
+    
+    .middle{
+  transform: translate(0%);
+}
+            .btn{
+                  position: relative;
+                  display: block;
+                  color: white;
+                  font-size: 14px;
+                  font-family: "montserrat";
+                  text-decoration: none;
+                  margin: 30px 0;
+                  border: 2px solid #19aac4;
+                  padding: 14px 60px;
+                  text-transform: uppercase;
+                  overflow: hidden;
+                  transition: 1s all ease;
+                }
+          .btn::before{
+                background: #0692bd;
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: -1;
+                transition: all 0.6s ease;
+             }
+             .btn4::before{
+                width: 100%;
+                height: 0%;
+                transform: translate(-50%,-50%) rotate(-45deg);
+              }
+              .btn4:hover::before{
+                height: 380%;
+              }
+
+          </style>
+    
+    </div>
+    <div class="item2" style="padding: 120px;color: white">
+    
+      <h1 style="font-size: 50px;"><b>Pneumonia Detection System</b></h1><br>
+      <p1> An algorithm to automatically identify whether<br>
+         a patient is suffering from pneumonia or not by<br> looking at chest X-ray images</p1><br><br><br>
+      <a href="#">
+       <button class="button"  onclick="document.getElementById('id01').style.display='block'"
+        style="vertical-align:middle;" ><span>Patient details</span></button></a>
+       <img src="{{ url_for('static', filename='gif1.gif') }}" style="height: 150px;">
+      <style>
+           .button {
+             border-radius: 50px;
+             background: linear-gradient(to right, #a8a61d, #198a0e) !important;
+             border: none;
+             color: #FFFFFF;
+             text-align: center;
+             font-size: 28px;
+             padding: 20px;
+             width: 300px;
+             transition: all 0.5s;
+             cursor: pointer;
+             margin: 5px;
+           }
+           
+           .button span {
+             cursor: pointer;
+             display: inline-block;
+             transition: 0.5s;
+           }
+           
+           .button span:after {
+             content: '\00bb';
+             opacity: 0;
+             top: 0;
+             right: -20px;
+             transition: 0.5s;
+           }
+           
+           .button:hover span {
+             padding-right: 25px;
+           }
+           
+           .button:hover span:after {
+             opacity: 1;
+             right: 0;
+           }
+           </style>
+    <style>
+      .item2
+      {
+        background-image: url({{ url_for ('static', filename='bg1.jpg') }});
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    </style>
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="{{ url_for('static', filename='avtar1.jpg') }}" width="120px">
+      
+    </div>
+    
+    <div class="container">
+      <div>
+        <p style="color: #000;">To enter details of new patient click on "ENTER" button</p> 
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    
+        
+      <button style="--content:'Enter';">
+        <div class="left"></div>
+        <li class="active"><a href="/predict_img" style="text-decoration: none;"> 
+        Enter
+      </a></li>
+        <div class="right"></div>
+      </button>
+    
+    </div>
+    <p style="color: #000;">To view details of patient click on "SHOW" button</p>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
+      <button style="--content:'Show';">
+        <div class="left"></div>
+        <li class="active"><a href="/get_details" style="text-decoration: none;"> 
+          Show
+          </a></li>
+        <div class="right"></div>
+      </button>
+    </div>
+  </form>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+<style>
+  :root {
+  --text-color: hsla(210, 50%, 85%, 1);
+  --shadow-color: hsla(210, 40%, 52%, .4);
+  --btn-color: hsl(210, 80%, 42%);
+  --bg-color: #141218;
+}
+* {
+  box-sizing: border-box;
+}
+button {
+  position:relative;
+  padding: 10px 20px;  
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  
+  font-size: 30px;  
+  color: var(--text-color);
+  
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px; 
+  z-index: 0;  
+  overflow: hidden;   
+}
+
+button:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+.right::after, button::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 40px 40px;
+  pointer-events:none;
+}
+
+button::after{
+  font-weight: 200;
+  top: -30px;
+  left: -20px;
+} 
+
+.right, .left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.right {
+  left: 66%;
+}
+.left {
+  right: 66%;
+}
+.right::after {
+  top: -30px;
+  left: calc(-66% - 20px);
+  
+  background-color: var(--bg-color);
+  color:transparent;
+  transition: transform .4s ease-out;
+  transform: translate(0, -90%) rotate(0deg)
+}
+
+button:hover .right::after {
+  transform: translate(0, -47%) rotate(0deg)
+}
+
+button .right:hover::after {
+  transform: translate(0, -50%) rotate(-7deg)
+}
+
+button .left:hover ~ .right::after {
+  transform: translate(0, -50%) rotate(7deg)
+}
+
+/* bubbles */
+button::before {
+  content: '';
+  pointer-events: none;
+  opacity: .6;
+  background:
+    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+  to {
+    transform: translate(0, -66.666%);
+  }
+}
+</style>
+
+
+
+<style>
+  body {font-family: Arial, Helvetica, sans-serif;}
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+ 
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #2E4053;
+    opacity: 0.9;
+    border-radius: 20px;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 40%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+  </style>
+
+
+
+
+
+
+
+    </div>
+    <div class="item3">
+
+      <img src="{{ url_for('static', filename='img1.jpg') }}" style="height: 300px;width: 300px;"><br>
+      <b><i><u>Using pre-trained model<br>VGG 16</b></i></u><br>
+      <p>VGG16 is a convolutional neural<br> network model proposed by<br> K. Simonyan and A. Zisserman</p>
+      <a href="/vgg16">
+      <button class="button" style="vertical-align:middle;background: linear-gradient(to right, #df1c1c, #e7a61a) !important;" >
+        <span>Details</span></button></a>
+
+    </div>
+    <div class="item4">
+
+      <img src="{{ url_for('static', filename='img2.jpg') }}"style="height: 300px;width: 300px;"><br>
+      <b><i><u>Using pre-trained model<br>VGG 19</b></i></u><br>
+      <p>VGG-19 leads to faster convergence<br> compared to VGG-16, since it consists<br> of deeper ConvNet layers</p>
+      <a href="/vgg19">
+      <button class="button" style="vertical-align:middle;background: linear-gradient(to right, #df1c1c, #e7a61a) !important;" >
+        <span>Details</span></button></a>
+
+    </div>
+    <div class="item5">
+
+      <img src="{{ url_for('static', filename='img3.jpg') }}"style="height: 300px;width: 300px;"><br>
+      <b><i><u>Inception-v3</b></i></u> <br>
+      <p><b>Inception-v3</b> is a convolutional neural<br> 
+        network for assisting in image analysis<br> and object detection, and got its start<br> as a module for Googlenet.</p>
+      <a href="/inception_v3">
+      <button class="button" style="vertical-align:middle;background: linear-gradient(to right, #df1c1c, #e7a61a) !important;" >
+        <span>Details</span></button></a>
+
+    </div>
+
+
+    <div class="item6">
+
+      <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{ url_for('static', filename='slike-1.jpg') }}" alt="Los Angeles" width="1200" height="500">  
+          </div>
+          <div class="carousel-item">
+            <img src="{{ url_for('static', filename='slike-2.jpg') }}" alt="Chicago" width="1200" height="500">   
+          </div>
+          <div class="carousel-item">
+            <img src="{{ url_for('static', filename='slike-3.jpeg') }}" alt="New York" width="1200" height="500">  
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      
+    </div>
+
+
+    <div class="item7" style="padding: 30px">
+      <h2 style="font-size: 40px"><b><i><u>Pneumonia Detection System</u></i></b></h2>
+      <p>Pneumonia causes the death of around 700,000 children every year and affects 7% of the global population.<br>
+        Chest X-rays are primarily used for the diagnosis of this disease. However, even for a trained radiologist,<br>
+         it is a challenging task to examine chest X-rays. There is a need to improve the diagnosis accuracy.<br>
+         In this work, an efficient model for the detection of pneumonia trained on digital chest X-ray images is proposed,<br>
+         which could aid the radiologists in their decision making process. 
+         </p><br>
+      
+      <marquee style="color: white;font-size: 30px;">Efficient Pneumonia Detection in Chest Xray Images Using Deep Transfer Learning</marquee>
+    
+    </div>
+    <div class="item8">
+      <img src="{{ url_for('static', filename='gif2.gif') }}">
+
+    </div>
+    <div class="item9">
+      <img src="{{ url_for('static', filename='gif3.gif') }}">
+
+    </div>
+    <div class="item14" style="color:silver;padding: 5px">
+      <div class="item14" style="color:silver;padding: 5px">
+
+        copyrights &copy; 2021 | all rights recieved 2021.
+    
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>VGG 19</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #2E4053;
+        }
+    </style>
+      <a href="/homepage">
+        <i class="fa fa-arrow-circle-left" style="font-size:48px;color: cornflowerblue;margin-left: 30px;margin-top: 30px;"></i></a>
+
+        <b><u><center><h1 style="margin-top: -30px;">Architecture of VGG19</h1></center></u></b><br><br>
+        <p style="font-size: 24px;margin-left: 100px;">VGG-19 model is similar to that of VGG-16 with much common functionality.
+             But VGG-19 leads to faster convergence compared to VGG-16, since it consists of deeper ConvNet layers. 
+             That means the loss function here is comparatively lower but the learning rate is slower since it has deeper layers.</p>
+        <center><img src="{{ url_for ('static', filename='vgg19.png')}}" width="1150px" height="500px"></center>
+        <p style="font-size: 24px;margin-left: 100px;">The model has 16 convolutional layers with small receptive fields (3x3),
+             144 million parameters, five max- pooling layers (2x2 size) and three fully connected layers, with a soft-max activation
+              feature on the final layer. The input to cov1 layer is of fixed size 224 x 224 RGB image. The image is passed through a 
+              stack of convolutional layers, where the filters were used with a very small receptive field: 3×3.</p>
+              <center><img src="{{ url_for ('static', filename='vgg19-2.png')}}" width="1150px" height="500px"></center>
+</body>
+</html>

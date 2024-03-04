@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Enter</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #2E4053;
+        }
+    </style>
+     <a href="/homepage">
+    <i class="fa fa-arrow-circle-left" style="font-size:48px;color: cornflowerblue;margin-left: 20px;margin-top: 15px;"></i></a>
+    <center><h1 style="margin-top: -50px;">Enter Patient Details</h1></center>
+    <div class="enter">
+        {% for mesg in get_flashed_messages() %}
+        <h1>{{ mesg }}</h1>
+        {% endfor %}
+    <form style="margin-top: 15px;" action="#"  method="POST">
+            <label>First Name : </label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required><br><br>
+            <label>Last Name : </label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." style="margin-right: 4px;" required><br><br>
+            <label>Patient Id  : </label>
+            <input type="number" id="pid" name="patientid" style="width: 90%;padding:12px ;border-radius: 4px;margin-left: 5px;" placeholder="Patient Id" required><br><br>
+            <label>Age : </label>
+            <input type="number" id="text" name="age" placeholder="enter age" style="width: 40%;padding: 12px;border-radius: 4px;margin-left: 45px;" required>&emsp;&emsp;
+            <label>Sex : </label>
+            <select name="gender" style="width: 40%;padding: 12px;border-radius: 4px;margin-left: 40px;" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select><br><br>
+              <label>Patient Symptoms : </label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px;width: 97%;padding: 12px;border-radius: 4px;" required></textarea>
+              <label>Pneumonia Percentage : </label>
+              <input type="number" step="any" id="pneumoniapercent" name="pneumoniapercent" placeholder="enter percentage" style="width: 40%;padding: 12px;border-radius: 4px;margin-left: 45px;" required>&emsp;&emsp;
+              <br>
+              <label>Normal Percentage : </label>
+              <input type="number" step="any" id="normalpercent" name="normalpercent" placeholder="enter percentage" style="width: 40%;padding: 12px;border-radius: 4px;margin-left: 45px;" required>&emsp;&emsp;
+              <a herf="homepage"><input type="submit"  value="View Report"></a>
+    </form>
+    </div>
+    
+    <style>
+        .enter{
+            background-color: darkgrey;
+            padding: 60px;
+            border-radius: 5px;
+        }
+        input[type=text]{
+        width: 90%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        }
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+            }
+
+        input[type=submit] {
+        background-color: teal;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        margin-top: 15px;
+        cursor: pointer;
+        float: right;
+        }
+
+        input[type=submit]:hover {
+        background-color: rgb(4, 75, 75);
+        }
+
+    </style>
+</body>
+</html>
